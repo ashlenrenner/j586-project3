@@ -1,0 +1,31 @@
+<xml>
+
+  <!-- performance chart -->
+    <performances>
+      <score>
+        <year>2009-10</year>
+        <sigAwd>41.9</sigAwd>
+        <sigElig>24.1</sigElig>
+        <nonSig>16.4</nonSig>
+      </score>
+      <score>
+        <year>2010-11</year>
+        <sigAwd>35.9</sigAwd>
+        <sigElig>23.0</sigElig>
+        <nonSig>15.3</nonSig>
+      </score>
+      <score>
+        <year>2011-12</year>
+        <sigAwd>31.7</sigAwd>
+        <sigElig>22.0</sigElig>
+        <nonSig>14.4</nonSig>
+      </score>
+      <score>
+        <year>2012-13</year>
+        <sigAwd>31.9</sigAwd>
+        <sigElig>22.6</sigElig>
+        <nonSig>14.7</nonSig>
+      </score>
+    </performances>
+
+</xml>

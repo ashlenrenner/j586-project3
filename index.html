@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="description" content="sig data">
+    <meta name="Ashlen Renner" content="">
+    <title>SIG Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/favicon.ico" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200' rel='stylesheet' type='text/css'>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- high charts -->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="js/performance.js" type="text/javascript"></script>
+    <script src="js/pie.js" type="text/javascript"></script>
+
+    <!-- data tables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.css">
+    <script src="js/datatable.js" type="text/javascript"></script>
+    <script src="http://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+
+
+
+    <!-- bootstrap -->
+    <script type="text/javascript" src="http://getbootstrap.com/2.3.2/assets/js/bootstrap.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    <!-- high maps -->
+    <!--<script type="text/javascript" src="http://code.highcharts.com/maps/highmaps.js"></script> -->
+    <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+    <!-- // <script src="http://code.highcharts.com/maps/modules/exporting.js"></script> -->
+    <script src="http://code.highcharts.com/mapdata/countries/us/us-all.js"></script>
+    <script src="js/map.js" type="text/javascript"></script>
+
+</head>
+  <body>
+
+<!-- navbar -->
+    <nav class="navbar navbar-default">
+  <!-- <div class="container-fluid"> -->
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <button id="sections" class="nav navbar-nav navbar-left">
+      <strong>Sections</strong>
+
+    </button>
+    <div id="subscribe" class="nav navbar-nav navbar-right">
+      Subscribe
+    <form class="navbar-form navbar-right" id="search" role="search">
+      <div class="form-group" >
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+    </form>
+    </div>
+  </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><font color= "white">Subscribe</font></a></li>
+      </ul> -->
+      <!-- <form class="navbar-form navbar-right" id="search" role="search">
+        <div class="form-group" >
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </form> -->
+
+    </div><!-- /.navbar-collapse -->
+  <!-- </div>-->
+  <!-- /.container-fluid -->
+</nav>
+
+<!--intro header and text-->
+    <div class="container">
+      <div class="row">
+      <div class="head">
+      <h1>Studying up on School Improvement Grants</h1>
+    </div>
+      <div class="intro">
+        As the U.S. recovered from the initial shock of the Great Recession, many schools across the
+        country struggled to provide their students with the resources they needed to succeed.
+        The U.S. was falling behind in education as reading, writing and math scores steadily
+        decreased, and schools had to cut back their budgets. States were awarded nearly $3.5 billion
+        in School Improvement Grant (SIG) funds in 2010 to turn around their persistently lowest-achieving schools.
+        Since then, studies have shown SIG schools have improved, but even as the country eased out of the Recession,
+        schools continue to apply for aid.
+    </div>
+<!--social buttons-->
+<div class="social-btns">
+    <a class="btn btn-social-icon btn-facebook">
+     <i class="fa fa-facebook"></i>
+    </a>
+    <a class="btn btn-social-icon btn-twitter">
+     <i class="fa fa-twitter"></i>
+    </a>
+    <a class="btn btn-social-icon btn-google">
+     <i class="fa fa-google"></i>
+    </a>
+  </div>
+</div>
+
+<!-- map -->
+  <div class="row">
+    <div id="map"></div>
+  </div>
+
+<!-- pie chart -->
+    <div class="row">
+    <!--pie info accordion-->
+        <div class="col-md-6 col-sm-12 pull-right">
+          <div class= "panel-group accordion" id="accordion">
+            <div class="panel panel-default">
+            <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  Improvement Models
+                </a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+              <div class="panel-body">
+                Each SIG school is required to choose one of the four improvement methods set by the U.S. Department of Education.
+              </div>
+            </div>
+            </div>
+            <div class="panel panel-default">
+            <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                   Transformation Model
+                </a><i class="indicator glyphicon glyphicon-chevron-up  pull-right"></i>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                The Transformation Model requires schools to "replace the principal,
+                develop a teacher-and leader-evaluation system that takes student progress into account,
+                introduce significant instructional reforms,
+                increase learning time, and provide flexibility and support."
+              </div>
+              <div class="info-source"><small>Source: U.S. Department of Education</small></div>
+            </div>
+            </div>
+            <div class="panel panel-default">
+            <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  Turnaround Model
+                </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body">
+                The Turnaround Model requires schools to "replace the principal and no less than 50 percent of the staff,
+                 introduce significant instructional reforms, increase learning time, and provide flexinility and support."
+              </div>
+              <div class="info-source"><small>Source: U.S. Department of Education</small></div>
+
+            </div>
+            </div>
+            <div class="panel panel-default">
+            <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                  Restart Model
+                </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+              </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse">
+              <div class="panel-body">
+                The Restart Model details schools reopen "under the management of a charter school operator,
+                a charter management organization or an education management organiztion."
+              </div>
+              <div class="info-source"><small>Source: U.S. Department of Education</small></div>
+            </div>
+            </div>
+            <div class="panel panel-default">
+            <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+              <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                  School Closure
+                </a><i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+              </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse">
+              <div class="panel-body">
+                SIG Schools that follow the School Closure Model close entirely and
+                "reassign students to a higher-achieving schools."
+              </div>
+              <div class="info-source"><small>Source: U.S. Department of Education</small></div>
+            </div>
+            </div>
+        </div>
+      </div> <!--end accordion-->
+    <!--pie chart-->
+      <div id="pie" class="col-md-6 col-sm-12" ></div>
+  </div> <!--end pie-->
+
+<!-- performance chart -->
+      <div id="performanceChart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      <div class="info-source"><small>Source: U.S. Department of Education, Council of the Great City Schools</small></div>
+
+<!-- DataTables -->
+<table id="sigDataTable" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>School Name</th>
+                <th>City</th>
+                <th>State</th>
+                <th>District Name</th>
+                <th>2010/11/Award Amount</th>
+                <th>Model Selected</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+              <th>School Name</th>
+              <th>City</th>
+              <th>State</th>
+              <th>District Name</th>
+              <th>2010/11/Award Amount</th>
+              <th>Model Selected</th>
+              <th>Location</th>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+    </div>  <!-- closes container  -->
+
+    <!-- Footer -->
+    <div class="row">
+      <div class="divider"</div>
+
+    </div>
+
+  </body>
+</html>
