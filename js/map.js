@@ -231,7 +231,11 @@ $(function () {
         },
 
         colorAxis: {
-            min: 0
+              min: 1,
+              max: 150,
+              minColor: '#efecf3',
+              maxColor: '#990041'
+
         },
 
         series : [{

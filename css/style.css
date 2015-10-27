@@ -144,11 +144,14 @@ hr {
   margin-bottom: 40px;
 }
 #map {
-    height: 600px;
+    height: 650px;
     min-width: 310px;
     max-width: 800px;
     margin: 0 auto;
-
+}
+.highcharts-title{
+  font-weight: bold;
+  
 }
 /*#acordion{
   padding: 15px;
