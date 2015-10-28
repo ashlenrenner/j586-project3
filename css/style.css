@@ -79,7 +79,17 @@
         display: none !important;
     }
 }
-#datatables-intro{
+/*intro accordion mobile*/
+
+#accordion-mobile .panel-default .panel-heading{
+  background-color: #e7d1d0;
+}
+@media screen and (min-width: 1024px) {
+    #accordion-mobile {
+        display: none !important;
+    }
+}
+#perf-chart-intro, #datatables-intro{
   text-align: left;
   font-size: 150%;
 }
@@ -142,7 +152,6 @@
   font-size: 120%;
 }
 
-
 h4 {
   margin-top: 25px;
 }
@@ -180,12 +189,7 @@ hr {
 .panel-group .accordion{
   align: right;
 }
-/*accordion mobile*/
-@media screen and (min-width: 1024px) {
-    .accordion-mobile {
-        display: none !important;
-    }
-}
+
 /*pie charts mobile*/
 #pie{
   max-height: 400px;
@@ -197,6 +201,11 @@ hr {
 
 }
 }
+/*performance chart*/
+.perf-title{
+  margin-top: 7%;
+}
+
 /*datatables styles*/
 #sigDataTable_wrapper{
   margin-bottom:10%;

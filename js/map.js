@@ -245,7 +245,7 @@ $(function () {
             name: 'Total schools',
             states: {
                 hover: {
-                    color: '#3c6698'
+                    color: '#6C160F'
                 }
             },
             dataLabels: {

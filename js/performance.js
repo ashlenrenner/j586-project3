@@ -122,15 +122,15 @@ function buildChart(xml) {
           series: [{
               name: 'SIG-Awarded',
               data: sigAwd,
-              color: '#0971B2'
+              color: '#861b13'
           }, {
               name: 'SIG-Eligible',
               data: sigElig,
-              color: '#960104'
+              color: '#aa5f5a'
           }, {
               name: 'SIG Non-Eligible',
               data: nonSig,
-              color: '#59651E'
+              color: '#cfa4a1'
           }]
         });
 
