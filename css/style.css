@@ -39,6 +39,17 @@
   padding: 5px 10px 5px 10px;
 
 }
+#sections: hover{
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 7px;
+  padding: 5px;
+  margin-top: 7px;
+  margin-left: 20px;
+  padding: 5px 10px 5px 10px;
+
+}
 @media screen and (max-width: 1024px) {
     #subscribe {
         display: none !important;
@@ -66,6 +77,10 @@
     .intro {
         display: none !important;
     }
+}
+#datatables-intro{
+  text-align: left;
+  font-size: 150%;
 }
 
 .info-source{
@@ -118,8 +133,12 @@
 /*accordion*/
 .panel-default .panel-heading{
   color: black;
-  background-color: #9FBFE4;
+  background-color: #ce9b98;
 
+}
+.panel-body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 120%;
 }
 
 
@@ -144,14 +163,14 @@ hr {
   margin-bottom: 40px;
 }
 #map {
-    height: 650px;
+    height: 700px;
     min-width: 310px;
     max-width: 800px;
     margin: 0 auto;
 }
 .highcharts-title{
   font-weight: bold;
-  
+
 }
 /*#acordion{
   padding: 15px;
@@ -160,49 +179,34 @@ hr {
 .panel-group .accordion{
   align: right;
 }
+/*pie charts mobile*/
 #pie{
-  /*margin: 3%;*/
-}
-/*@media screen and (max-width: 1024px) {
-    #pie {
-        margin-top: 5px !important;
-        float: right !important;
-    }
-}*/
-/*.highcharts-legend-item {
-    align: center !important;
-    verticalAlign: 'top',
-    floating: true;
-
+  max-height: 400px;
 }
 @media screen and (max-width: 1024px) {
-    .highcharts-legend-item {
-        align: center !important;
-        verticalAlign: 'top';
-        floating: true;
+#pie{
+  /*min-height: 300px;*/
+  max-height:50%;
 
-    }
-}*/
+}
+}
 /*datatables styles*/
+#sigDataTable_wrapper{
+  margin-bottom:10%;
+}
 table.display tbody tr:nth-child(even):hover td{
-    background-color: #bcc8e2 !important;
+    background-color: #ce9b98 !important;
 }
 
 table.display tbody tr:nth-child(odd):hover td {
-    background-color: #bcc8e2 !important;
+    background-color: #ce9b98 !important;
+}
+table.display tbody tr:nth-child(odd) td {
+    background-color: #eedddc !important;
 }
 
 .loading {
     margin-top: 10em;
     text-align: center;
     color: gray;
-}
-
-.divider{
-  border-bottom: 1px solid #C4C4C3;
-  width: 100%;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  padding: 5px;
-
 }

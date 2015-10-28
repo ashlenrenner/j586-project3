@@ -233,8 +233,8 @@ $(function () {
         colorAxis: {
               min: 1,
               max: 150,
-              minColor: '#efecf3',
-              maxColor: '#990041'
+              minColor: '#F3E8E7',
+              maxColor: '#8E1710'
 
         },
 
@@ -245,7 +245,7 @@ $(function () {
             name: 'Total schools',
             states: {
                 hover: {
-                    color: '#960104'
+                    color: '#3c6698'
                 }
             },
             dataLabels: {

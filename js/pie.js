@@ -10,7 +10,9 @@ $('#pie').highcharts({
         plotBackgroundColor: null,
         plotBorderWidth: null,
         plotShadow: false,
+        height: 400,
         type: 'pie'
+
     },
     title: {
         text: 'Improvement Methods'
@@ -34,16 +36,16 @@ $('#pie').highcharts({
         data: [{
             name: "Transformation",
             y: 74,
-            color: "#3c6698"
+            color: "#CFA4A1"
         }, {
             name: "Restart",
             y: 4,
-            color:"#59651E"
+            color:"#E7D1D0"
 
         }, {
             name: "Turnaround",
             y: 20,
-            color: '#CB723C'
+            color: '#AA5F5A'
         }, {
             name: "Closure",
             y: 2,
