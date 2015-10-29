@@ -5,31 +5,47 @@
 
 }
 
+/*Search bar*/
+
 #search {
-  border-radius: 20px;
-  /*border-color: #605E61;*/
-  background-color: #605E61;
-  color:#AEACB0;
+  margin-left: 20px;
 
 }
-.placeholder{
-  /*color: #B8ACAF;*/
-  padding: 2px;
-  outline: none;
-}
-.form-group .form-control{
-  background-color: #605E61;
-  /*color:#AEACB0;*/
-  outline: none;
-}
+
+#search input[type="text"] {
+
+    background: url(search-dark.png) no-repeat 10px 6px #444;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #777;
+    width: 150px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    }
+
+#search input[type="text"]:focus {
+    width: 200px;
+    }
+ /*search mobile*/
+ @media screen and (max-width: 1024px) {
+   #search{
+     display: none !important;
+   }
+   }
 
 
-#subscribe{
-  color: white;
-  font-weight: bold;
-}
 
-#sections{
+#sections {
   color: white;
   background-color: black;
   border: 1px solid gray;
@@ -44,15 +60,11 @@
   color: white;
   background-color: black;
   border: 1px solid white;
-  border-radius: 7px;
-  padding: 5px;
-  margin-top: 7px;
-  margin-left: 20px;
-  padding: 5px 10px 5px 10px;
+
 
 }
 @media screen and (max-width: 1024px) {
-    #subscribe {
+    #sections {
         display: none !important;
     }
 }
@@ -93,10 +105,7 @@
         display: none !important;
     }
 }
-#perf-chart-intro, #datatables-intro{
-  text-align: left;
-  font-size: 150%;
-}
+
 
 .info-source{
   text-align: right;
@@ -212,11 +221,27 @@ hr {
 
 }
 }
+.divider{
+margin-top:5%;
+margin-bottom:0;
+}
+.divider2{
+  margin-top:5%;
+  margin-bottom:3%;
+}
 /*performance chart*/
 .perf-title{
   margin-top: 7%;
 }
 .perf-chart-intro{
+  text-align: left;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: lighter;
+  font-size: 150%;
+  line-height: 150%;
+  margin-bottom: 5%;
+}
+#datatables-intro{
   text-align: left;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: lighter;
